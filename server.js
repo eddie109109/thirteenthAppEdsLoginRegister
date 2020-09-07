@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, "build"))); // connect to the static
 
 //direct the user to the built version of react front page, it only works once it is built(yarn built)
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "public", "index.html"));
 });
 
 // server static assets in production
