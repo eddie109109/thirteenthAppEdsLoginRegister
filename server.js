@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "build"))); // connect to the static file through express
+// app.use(express.static(path.join(__dirname, "build"))); // connect to the static file through express
 
 //direct the user to the built version of react front page, it only works once it is built(yarn built)
 
