@@ -1,17 +1,16 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const route = require("./route");
+const router = require("./router");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const routes = require("./routes");
 app.use(express.static(path.join(__dirname, "build"))); // connect to the static file through express
 
 //direct the user to the built version of react front page, it only works once it is built(yarn built)
 
-app.use("/", route);
+app.use("/", router);
 
 // server static assets in production
 if (process.env.NODE_ENV === "production") {
